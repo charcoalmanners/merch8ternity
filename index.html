@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>please</title>
+<link rel="stylesheet" href="style.css"/>
+<link rel="icon" href="icon.jpeg">
+
+</head>
+<body>
+    <script type="text/javascript" language="javascript">
+        function increaseDiv() {
+var myDiv = document.querySelector(".button1")
+var currWidth = myDiv.clientWidth;
+myDiv.style.width = currWidth + 100 + "px";
+
+var myDiv = document.querySelector(".button1")
+var currHeight = myDiv.clientHeight;
+myDiv.style.height = currHeight + 100 + "px";
+}
+
+function resizeText(multiplier) {
+    multiplyText(multiplier, document.getElementById('yes'));    
+}
+
+function multiplyText(multiplier, txtobj) {
+    //keep current font size
+    if (txtobj.style.fontSize == '') {
+        txtobj.style.fontSize = "100%";
+    }
+    //keep current font size
+    if (multiplier == 0) {
+        txtobj.style.fontSize = "100%";
+    } 
+    else { //get only the number part of the fontsize
+    txtobj.style.fontSize = parseFloat(txtobj.style.fontSize) + multiplier + "%";
+    }
+}
+
+var array = ["why? :(", "please", "pleeeeaseeee", "aw cmon", "pretty please", "with a cherry on top?", "yes do it", "screw you", "press yes", "do it", "free will is an illusion", "press yes or i'll crash ur computer", "pls i want 50k :D", "installing an ip grabber...","installing an ip grabber...","installing an ip grabber...", "successfully uploaded", "wait no im gonna die", "pls","pls","pls","no :(","NOOOO POOKIE", ":((((("];
+    var index = 0;
+
+   function switchMessage() {
+      if (index < array.length) {
+        document.getElementById("no").innerText = array[index];
+        index++;
+      }
+
+      if (index === array.length) {
+        document.getElementById("b1").disabled = true;
+      }
+    }
+
+    </script>
+
+
+<img src="wahoo1.gif" class="center">
+    <h1 id="h1"><b>buy 8ternity merch?</b></h1>
+        <div class="jc-center">
+            <a href="wow.html"><button class="button1 margin-right" id="b1"><h2 id="yes">yes</h2></a></button>
+            <a href="javascript:resizeText(150);"><button class="button2" id="b2" onclick="increaseDiv(); switchMessage(); " ><h2 id="no">no</h2></button></a>
+        </div>
+</body>
+</html>
